@@ -12,6 +12,7 @@ class HomePage extends StatelessWidget {
     final List<HomeModel> modelList = HomeModel.fetchAll();
 
     return Scaffold(
+        // backgroundColor: Palette.background_color,
         appBar: AppBar(
           backgroundColor: Palette.primary_color,
           title: Text(

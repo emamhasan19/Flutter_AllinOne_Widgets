@@ -19,7 +19,7 @@ Widget RegularText(String text) {
       text,
       textAlign: TextAlign.justify,
       style: TextStyle(
-        fontSize: 16,
+        fontSize: 20,
         color: Palette.black_color,
       ),
     ),

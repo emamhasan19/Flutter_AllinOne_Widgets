@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_allinone/features/catalog/widgets/catalog_item_list.dart';
-import 'package:flutter_allinone/features/home/models/home_model.dart';
-import 'package:flutter_allinone/src/core/colors.dart';
-import 'package:flutter_allinone/src/core/text_controls.dart';
+import 'package:flutter_allinone/src/core/routes/routes.dart';
+
+import '../../../src/core/colors.dart';
+import '../../../src/core/text_controls.dart';
+import '../models/home_model.dart';
 
 class HomeItemCard extends StatelessWidget {
   // final String title;
@@ -19,16 +20,21 @@ class HomeItemCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        // Navigate to the next screen
-        Navigator.push(
+        // Navigator.push(
+        //   context,
+        //   // MaterialPageRoute(builder: (context) => DetailsPage(title: title,details: details,)),
+        //   MaterialPageRoute(
+        //     builder: (context) => CatalogItemList(
+        //         title: homeModel.title,
+        //         details: homeModel.details,
+        //         catalogList: homeModel.catalogList),
+        //   ),
+        // );
+
+        Navigator.pushNamed(
           context,
-          // MaterialPageRoute(builder: (context) => DetailsPage(title: title,details: details,)),
-          MaterialPageRoute(
-            builder: (context) => CatalogItemList(
-                title: homeModel.title,
-                details: homeModel.details,
-                catalogItemList: homeModel.catalogList),
-          ),
+          catalogPage,
+          arguments: {"arg1": homeModel.catalogList, "arg2": homeModel.title},
         );
       },
       child: Padding(
