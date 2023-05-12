@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_allinone/features/home/models/home_model.dart';
+import 'package:flutter_allinone/features/catalog/models/catalog_model.dart';
 import 'package:flutter_allinone/src/core/colors.dart';
 import 'package:flutter_allinone/src/core/text_controls.dart';
 
-class DetailsPage extends StatelessWidget {
+class CatalogPage extends StatelessWidget {
 // final String title;
 // final String details;
-  final HomeModel homeModel;
+  final CatalogModel catalogModel;
 
-  const DetailsPage({super.key, required this.homeModel});
+  const CatalogPage({super.key, required this.catalogModel});
 
   // const DetailsPage({super.key, required this.title, required this.details});
 
@@ -19,7 +19,7 @@ class DetailsPage extends StatelessWidget {
         backgroundColor: Palette.primary_color,
         // title: Text(title),
         title: Text(
-          homeModel.title,
+          catalogModel.title,
           style: TextStyle(
             fontSize: 24,
             fontWeight: FontWeight.bold,
@@ -27,7 +27,7 @@ class DetailsPage extends StatelessWidget {
         ),
       ),
       // body: Center(child: Text(details)),
-      body: RegularText(homeModel.details),
+      body: RegularText(catalogModel.details),
     );
   }
 }

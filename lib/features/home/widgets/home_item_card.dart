@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_allinone/features/catalog/widgets/catalog_item_list.dart';
 import 'package:flutter_allinone/features/home/models/home_model.dart';
-import 'package:flutter_allinone/features/home/pages/details_page.dart';
 import 'package:flutter_allinone/src/core/colors.dart';
 import 'package:flutter_allinone/src/core/text_controls.dart';
 
@@ -24,9 +24,11 @@ class HomeItemCard extends StatelessWidget {
           context,
           // MaterialPageRoute(builder: (context) => DetailsPage(title: title,details: details,)),
           MaterialPageRoute(
-              builder: (context) => DetailsPage(
-                    homeModel: homeModel,
-                  )),
+            builder: (context) => CatalogItemList(
+                title: homeModel.title,
+                details: homeModel.details,
+                catalogItemList: homeModel.catalogList),
+          ),
         );
       },
       child: Padding(
