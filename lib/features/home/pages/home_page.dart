@@ -12,7 +12,6 @@ class HomePage extends StatelessWidget {
     final List<HomeModel> modelList = HomeModel.fetchAll();
 
     return Scaffold(
-        // backgroundColor: Palette.background_color,
         appBar: AppBar(
           backgroundColor: Palette.primary_color,
           title: Text(
@@ -26,7 +25,6 @@ class HomePage extends StatelessWidget {
         body: Padding(
           padding: EdgeInsets.all(10),
           child: GridView.builder(
-            //gridDelegate: SliverGridDelegateWithFixedCrossAxisCount,
             gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
               crossAxisCount: 3,
             ),
@@ -34,7 +32,6 @@ class HomePage extends StatelessWidget {
             itemBuilder: (BuildContext context, int index) {
               HomeModel homeModel = modelList[index];
 
-              // return HomeItemCard(title: modelList[index].title, icon: modelList[index].icon, details: modelList[index].details,);
               return HomeItemCard(
                 homeModel: homeModel,
               );

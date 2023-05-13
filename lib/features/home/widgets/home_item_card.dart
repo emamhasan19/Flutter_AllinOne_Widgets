@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_allinone/src/core/routes/routes.dart';
+import 'package:flutter_allinone/src/core/routes/routing_constant.dart';
 
 import '../../../src/core/colors.dart';
 import '../../../src/core/text_controls.dart';
@@ -13,8 +13,6 @@ class HomeItemCard extends StatelessWidget {
   final HomeModel homeModel;
 
   const HomeItemCard({super.key, required this.homeModel});
-
-  // const HomeItemCard({super.key, required this.title, required this.icon, required this.details});
 
   @override
   Widget build(BuildContext context) {
@@ -31,10 +29,16 @@ class HomeItemCard extends StatelessWidget {
         //   ),
         // );
 
+        //Using NameRoute
+
         Navigator.pushNamed(
           context,
           catalogPage,
-          arguments: {"arg1": homeModel.catalogList, "arg2": homeModel.title},
+          arguments: {
+            "catalogList": homeModel.catalogList,
+            "title": homeModel.title,
+            "details": homeModel.details
+          },
         );
       },
       child: Padding(
@@ -45,11 +49,8 @@ class HomeItemCard extends StatelessWidget {
             borderRadius: BorderRadius.circular(10.0),
           ),
           child: Column(
-            // mainAxisSize: MainAxisSize.min,
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              // Text(title),
-              // icon,
               Expanded(
                 flex: 1,
                 child: Container(
