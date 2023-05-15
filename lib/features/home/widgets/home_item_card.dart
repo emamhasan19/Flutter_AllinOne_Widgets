@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_allinone/features/home/models/home_model.dart';
+import 'package:flutter_allinone/src/core/colors.dart';
 import 'package:flutter_allinone/src/core/routes/routing_constant.dart';
-
-import '../../../src/core/colors.dart';
-import '../../../src/core/text_controls.dart';
-import '../models/home_model.dart';
+import 'package:flutter_allinone/src/core/text_controls.dart';
 
 class HomeItemCard extends StatelessWidget {
   // final String title;
@@ -54,23 +53,23 @@ class HomeItemCard extends StatelessWidget {
               Expanded(
                 flex: 1,
                 child: Container(
-                  decoration: BoxDecoration(
-                    color: Palette.primary_color,
+                  decoration: const BoxDecoration(
+                    color: Palette.primaryColor,
                     borderRadius: BorderRadius.only(
                       topLeft: Radius.circular(10),
                       topRight: Radius.circular(10),
                     ),
                   ),
                   child: Center(
-                    child: TitleText(homeModel.title),
+                    child: titleText(homeModel.title),
                   ),
                 ),
               ),
               Expanded(
                 flex: 3,
                 child: Container(
-                  decoration: BoxDecoration(
-                    color: Palette.secondary_color,
+                  decoration: const BoxDecoration(
+                    color: Palette.secondaryColor,
                     borderRadius: BorderRadius.only(
                       bottomLeft: Radius.circular(10),
                       bottomRight: Radius.circular(10),

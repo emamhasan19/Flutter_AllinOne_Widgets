@@ -18,99 +18,99 @@ class HomeModel {
   static List<HomeModel> fetchAll() => [
         HomeModel(
           title: 'Assets',
-          icon: Icon(
+          icon: const Icon(
             Icons.web_asset,
             size: 32,
-            color: Palette.primary_color,
+            color: Palette.primaryColor,
           ),
           details: 'Manage assets, display images, and show icons.',
-          catalogList: CatalogModel.AssetsCatalog(),
+          catalogList: CatalogModel.assetsCatalog(),
         ),
         HomeModel(
           title: 'Basics',
-          icon: Icon(
+          icon: const Icon(
             Icons.width_normal,
             size: 32,
-            color: Palette.primary_color,
+            color: Palette.primaryColor,
           ),
           details:
               'Widgets you absolutely need to know before building your first Flutter app.',
-          catalogList: CatalogModel.BasicsCatalog(),
+          catalogList: CatalogModel.basicsCatalog(),
         ),
         HomeModel(
           title: 'Input',
-          icon: Icon(
+          icon: const Icon(
             Icons.input,
             size: 32,
-            color: Palette.primary_color,
+            color: Palette.primaryColor,
           ),
           details:
               'Take user input in addition to input widgets in Material Components and Cupertino.',
-          catalogList: CatalogModel.InputCatalog(),
+          catalogList: CatalogModel.inputCatalog(),
         ),
         HomeModel(
           title: 'Interaction',
-          icon: Icon(
+          icon: const Icon(
             Icons.touch_app,
             size: 32,
-            color: Palette.primary_color,
+            color: Palette.primaryColor,
           ),
           details:
               'Respond to touch events and route users to different views.',
-          catalogList: CatalogModel.InteractionCatalog(),
+          catalogList: CatalogModel.interactionCatalog(),
         ),
         HomeModel(
           title: 'Layout',
-          icon: Icon(
+          icon: const Icon(
             Icons.layers,
             size: 32,
-            color: Palette.primary_color,
+            color: Palette.primaryColor,
           ),
           details:
               'Arrange other widgets columns, rows, grids, and many other layouts.',
-          catalogList: CatalogModel.LayoutCatalog(),
+          catalogList: CatalogModel.layoutCatalog(),
         ),
         HomeModel(
           title: 'Material',
-          icon: Icon(
+          icon: const Icon(
             Icons.add_card,
             size: 32,
-            color: Palette.primary_color,
+            color: Palette.primaryColor,
           ),
           details:
               'Visual, behavioral, and motion-rich widgets implementing the Material 3 design specification.',
-          catalogList: CatalogModel.MaterialCatalog(),
+          catalogList: CatalogModel.materialCatalog(),
         ),
         HomeModel(
           title: 'Scrolling',
-          icon: Icon(
+          icon: const Icon(
             Icons.swipe,
             size: 32,
-            color: Palette.primary_color,
+            color: Palette.primaryColor,
           ),
           details: 'Scroll multiple widgets as children of the parent.',
-          catalogList: CatalogModel.ScrollingCatalog(),
+          catalogList: CatalogModel.scrollingCatalog(),
         ),
         HomeModel(
           title: 'Styling',
-          icon: Icon(
+          icon: const Icon(
             Icons.style,
             size: 32,
-            color: Palette.primary_color,
+            color: Palette.primaryColor,
           ),
           details:
               'Manage the theme of your app, makes your app responsive to screen sizes, or add padding.',
-          catalogList: CatalogModel.StylingCatalog(),
+          catalogList: CatalogModel.stylingCatalog(),
         ),
         HomeModel(
           title: 'Text',
-          icon: Icon(
+          icon: const Icon(
             Icons.text_format,
             size: 32,
-            color: Palette.primary_color,
+            color: Palette.primaryColor,
           ),
           details: 'Display and style text.',
-          catalogList: CatalogModel.TextCatalog(),
+          catalogList: CatalogModel.textCatalog(),
         ),
       ];
 }

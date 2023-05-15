@@ -19,11 +19,11 @@ class CatalogPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Palette.primary_color,
+        backgroundColor: Palette.primaryColor,
         // title: Text(title),
         title: Text(
           title,
-          style: TextStyle(
+          style: const TextStyle(
             fontSize: 24,
             fontWeight: FontWeight.bold,
           ),
@@ -39,19 +39,19 @@ class CatalogPage extends StatelessWidget {
                   // text: 'Hello ',
                   // style: DefaultTextStyle.of(context).style,
                   children: <TextSpan>[
-                    TextSpan(
+                    const TextSpan(
                       text: 'Description: ',
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
                         fontSize: 20,
-                        color: Palette.primary_color,
+                        color: Palette.primaryColor,
                       ),
                     ),
                     TextSpan(
                       text: details,
-                      style: TextStyle(
+                      style: const TextStyle(
                         fontSize: 20,
-                        color: Palette.black_color,
+                        color: Palette.blackColor,
                       ),
                     ),
                   ],
@@ -93,7 +93,7 @@ class CatalogPage extends StatelessWidget {
                       child: ListTile(
                         leading: Container(
                           decoration: BoxDecoration(
-                            color: Palette.primary_color,
+                            color: Palette.primaryColor,
                             borderRadius: BorderRadius.circular(10),
                           ),
                           height: 40,
@@ -101,19 +101,19 @@ class CatalogPage extends StatelessWidget {
                           child: Center(
                             child: Text(
                               "${index + 1}",
-                              style: TextStyle(
+                              style: const TextStyle(
                                   fontSize: 16,
                                   fontWeight: FontWeight.bold,
-                                  color: Palette.white_color),
+                                  color: Palette.whiteColor),
                             ),
                           ),
                         ),
                         title: Text(
                           catalogModel.title,
-                          style: TextStyle(
+                          style: const TextStyle(
                               fontSize: 16,
                               fontWeight: FontWeight.bold,
-                              color: Palette.black_color),
+                              color: Palette.blackColor),
                         ),
                         // subtitle: Text("Description"),
                         trailing: catalogModel.icon,
@@ -141,7 +141,7 @@ class CatalogPage extends StatelessWidget {
 //           borderRadius: BorderRadius.circular(10),
 //           boxShadow: [
 //             BoxShadow(
-//               color: Palette.primary_color.withOpacity(.3),
+//               color: Palette.primaryColor.withOpacity(.3),
 //               // spreadRadius: 10,
 //               blurRadius: 3,
 //               offset: Offset(
@@ -159,14 +159,14 @@ class CatalogPage extends StatelessWidget {
 //               style: TextStyle(
 //                   fontSize: 16,
 //                   fontWeight: FontWeight.bold,
-//                   color: Palette.primary_color),
+//                   color: Palette.primaryColor),
 //             ),
 //             Text(
 //               catalogItemList[index].title,
 //               style: TextStyle(
 //                   fontSize: 16,
 //                   fontWeight: FontWeight.bold,
-//                   color: Palette.primary_color),
+//                   color: Palette.primaryColor),
 //             ),
 //             catalogItemList[index].icon
 //           ],

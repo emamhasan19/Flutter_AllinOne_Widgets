@@ -16,18 +16,18 @@ class CatalogItemDetails extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Palette.primary_color,
+        backgroundColor: Palette.primaryColor,
         // title: Text(title),
         title: Text(
           catalogModel.title,
-          style: TextStyle(
+          style: const TextStyle(
             fontSize: 24,
             fontWeight: FontWeight.bold,
           ),
         ),
       ),
       // body: Center(child: Text(details)),
-      body: RegularText(catalogModel.details),
+      body: regularText(catalogModel.details),
     );
   }
 }

@@ -1,20 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_allinone/features/catalog/models/catalog_model.dart';
 import 'package:flutter_allinone/features/catalog/pages/catalog_page.dart';
 import 'package:flutter_allinone/features/catalog/widgets/catalog_item_details.dart';
+import 'package:flutter_allinone/features/home/pages/home_page.dart';
 import 'package:flutter_allinone/src/core/routes/routing_constant.dart';
 
-import '../../../features/catalog/models/catalog_model.dart';
-import '../../../features/home/pages/home_page.dart';
-
 Route<dynamic> generateRoute(RouteSettings settings) {
-  // late String title = "";
-  // late String details = "";
-  // final List<CatalogModel> catalogItemList = [];
-  // final CatalogModel catalogModel;
-
   switch (settings.name) {
     case homeRoute:
-      return MaterialPageRoute(builder: (context) => HomePage());
+      return MaterialPageRoute(builder: (context) => const HomePage());
 
     case catalogPage:
       final args = settings.arguments as Map<String, dynamic>;
@@ -32,6 +26,6 @@ Route<dynamic> generateRoute(RouteSettings settings) {
               catalogModel: settings.arguments as CatalogModel));
 
     default:
-      return MaterialPageRoute(builder: (context) => HomePage());
+      return MaterialPageRoute(builder: (context) => const HomePage());
   }
 }

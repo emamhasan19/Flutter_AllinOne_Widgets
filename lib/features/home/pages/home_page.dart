@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_allinone/features/home/models/home_model.dart';
 import 'package:flutter_allinone/features/home/widgets/home_item_card.dart';
 import 'package:flutter_allinone/src/core/colors.dart';
-
-import '../models/home_model.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -13,8 +12,8 @@ class HomePage extends StatelessWidget {
 
     return Scaffold(
         appBar: AppBar(
-          backgroundColor: Palette.primary_color,
-          title: Text(
+          backgroundColor: Palette.primaryColor,
+          title: const Text(
             'Widget Catalog',
             style: TextStyle(
               fontSize: 24,
@@ -23,9 +22,9 @@ class HomePage extends StatelessWidget {
           ),
         ),
         body: Padding(
-          padding: EdgeInsets.all(10),
+          padding: const EdgeInsets.all(10),
           child: GridView.builder(
-            gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+            gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
               crossAxisCount: 3,
             ),
             itemCount: modelList.length,
